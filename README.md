@@ -1,16 +1,35 @@
-# day43_food_drink_menu
+# Food_drink_menu Instruction
 
-A new Flutter project.
+Day 43  –  Food/Drink Menu
 
-## Getting Started
+Challenge: Design an interactive menu for an online store or restaurant.”
 
-This project is a starting point for a Flutter application.
+<img title="" src="assets/images/Day-43-Food-or-drink-menu-2048x1482.png" alt="Day-43-Food-or-drink-menu-2048x1482.png" width="386">
 
-A few resources to get you started if this is your first Flutter project:
+# Design
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+I want to do these in order:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. The Food/Drink Menu picture page it self.
+
+2. Cart page.
+
+3. Order page.
+
+4. Sign in page.
+
+The instructor said he wanted all the code in the main.dart.
+
+## The Food/Drink Menu picture page it self
+
+d
+
+1. Goods
+
+2. Logo.
+
+3. Search bar.
+
+d
+
+1
