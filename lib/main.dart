@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 /// Flutter code sample for [Scaffold].
 
 /// Run the scaffold.
+final Color greyColor = Colors.grey[800]!;
+
 void main() => runApp(const ScaffoldExampleApp());
 
 class ScaffoldExampleApp extends StatelessWidget {
@@ -13,9 +15,9 @@ class ScaffoldExampleApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         primarySwatch: Colors.grey,
-        scaffoldBackgroundColor: Colors.grey[200], // light grey background
+        scaffoldBackgroundColor: greyColor, // light grey background
         appBarTheme: AppBarTheme(
-          backgroundColor: Colors.grey[800], // dark grey app bar
+          backgroundColor: greyColor, // dark grey app bar
           foregroundColor: Colors.white, // text color in app bar
         ),
       ),
@@ -56,9 +58,7 @@ class _ScaffoldExampleState extends State<ScaffoldExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: GridView.count(
-        // Create a grid with 2 columns.
-        // If you change the scrollDirection to horizontal,
-        // this produces 2 rows.
+        // Create a grid with 4 columns.
         crossAxisCount: 4,
         // Generate 12 drinks that display their index in the list.
         children: getDrinkList(),
@@ -78,41 +78,50 @@ class _ScaffoldExampleState extends State<ScaffoldExample> {
 
       /* Drawer。 */
       drawer: Drawer(
-        // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
+        backgroundColor: greyColor, // Make the drawer background grey
         child: ListView(
-          // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: [
-            const DrawerHeader(child: Text('Customer informations')),
+            DrawerHeader(
+              decoration: BoxDecoration(color: greyColor),
+              child: const Text(
+                'Customer informations',
+                style: TextStyle(color: Colors.white, fontSize: 20), // Header text white
+              ),
+            ),
             ListTile(
-              title: const Text('Orders'),
+              title: const Text(
+                'Orders',
+                style: TextStyle(color: Colors.white), // Text white
+              ),
               selected: _selectedIndex == 0,
+              selectedTileColor: Colors.grey[700], // Optional: highlight selected item
               onTap: () {
-                // Update the state of the app
                 _onItemTapped(0);
-                // Then close the drawer
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              title: const Text('Private information'),
+              title: const Text(
+                'Private information',
+                style: TextStyle(color: Colors.white), // Text white
+              ),
               selected: _selectedIndex == 1,
+              selectedTileColor: Colors.grey[700], // Optional: highlight selected item
               onTap: () {
-                // Update the state of the app
                 _onItemTapped(1);
-                // Then close the drawer
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              title: const Text('Settings'),
+              title: const Text(
+                'Settings',
+                style: TextStyle(color: Colors.white), // Text white
+              ),
               selected: _selectedIndex == 2,
+              selectedTileColor: Colors.grey[700], // Optional: highlight selected item
               onTap: () {
-                // Update the state of the app
                 _onItemTapped(2);
-                // Then close the drawer
                 Navigator.pop(context);
               },
             ),
@@ -161,7 +170,13 @@ getDrinkList() {
     return Center(
       child: Column(
         mainAxisSize: MainAxisSize.min, // makes column fit its content
-        children: [Image.asset(imagePaths[index]), Text(drinkNames[index])],
+        children: [
+          Image.asset(imagePaths[index]),
+          Text(
+            drinkNames[index],
+            style: const TextStyle(color: Colors.white), // Make grid text white
+          ),
+        ],
       ),
     );
   });
