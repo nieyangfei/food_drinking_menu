@@ -1,3 +1,13 @@
+# LINK:
+
+ZAPP:
+
+https://zapp.run/edit/appday43-zioi06k9ioj0?file=lib/main.dart&entry=lib/main.dart
+
+Github, just in case:
+
+https://github.com/nieyangfei/food_drinking_menu
+
 # Food_drink_menu Instruction
 
 Day 43  –  Food/Drink Menu
@@ -8,30 +18,50 @@ Challenge: Design an interactive menu for an online store or restaurant.”
 
 # Design
 
-I want to do these in order:
+Look at the following list and picture. Use scaffold to make code easy.
 
-1. The Food/Drink Menu picture page it self.
+1. Goods. Use scaffold body. Use an image list and name list to store data. Use GridView to display.
 
-2. Cart page.
+2. Logo. Use scaffold drawer. And some items to show information.
 
-3. Order page.
+3. Search bar. Use scaffold appBar as the searching component.
 
-4. Sign in page.
+4. 
 
-The instructor said he wanted all the code in the main.dart.
+![Day-43-Food-or-drink-menu-2048x1482_remarked.png](assets\images\Day-43-Food-or-drink-menu-2048x1482_remarked.png)
 
 
 
-## The Food/Drink Menu picture page it self
+# Code  Heirachy
 
-Look at the following list and picture. It is clear to see that the 1st part is important, and I want to do it in Grid. The 2nd part is a logo, and it can be done by drawer. The 3rd  part is search bar, and it is hard and need interaction. So, I choose do 1, 2 and 3 in sequence.
+Clear to see. Code is in main.dart. Images in assets. Code is in scaffold and just used body, drawer and appBar components.
 
-1. Goods
 
-2. Logo.
 
-3. Search bar.
+![code_heirachy.png](assets\images\code_heirachy.png)
 
-![Day-43-Food-or-drink-menu-2048x1482_remarked.png](D:\Canada\OntarioStudy\Lakehead\Learn\MobileProgramming\code\food_drinking_menu\assets\images\Day-43-Food-or-drink-menu-2048x1482_remarked.png)
 
-1
+
+# Screetshots
+
+Main screenshot:
+
+
+
+![main_shoot.png](assets\images\main_shoot.png)
+
+
+
+Search screenshot, supppose search Vodka Matini.
+
+
+
+![search_shot.png](assets\images\search_shot.png)
+
+
+
+Drawer shot, see the  left.
+
+
+
+![drawer_shoht.png](assets\images\drawer_shoht.png)
