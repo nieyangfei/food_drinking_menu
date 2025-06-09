@@ -60,23 +60,21 @@ class _ScaffoldExampleState extends State<ScaffoldExample> {
         // If you change the scrollDirection to horizontal,
         // this produces 2 rows.
         crossAxisCount: 4,
-        // Generate 100 widgets that display their index in the list.
+        // Generate 12 drinks that display their index in the list.
         children: getDrinkList(),
-
-        // List.generate(100, (index) {
-        //   return Center(
-        //     child: Column(
-        //       mainAxisSize: MainAxisSize.min, // makes column fit its content
-        //       children: [
-        //         Image.asset('assets/images/vodka_matini.png'),
-        //         Text('Vodka Martini'),
-        //       ],
-        //     ),
-        //   );
-        // }),
       ),
 
-      appBar: AppBar(title: const Text('app bar 最上面的横着的杆子')),
+      appBar: AppBar(
+        title: TextField(
+          decoration: InputDecoration(
+            hintText: 'Search...',
+            border: InputBorder.none,
+            hintStyle: TextStyle(color: Colors.white70),
+          ),
+          style: TextStyle(color: Colors.white),
+          cursorColor: Colors.white,
+        ),
+      ),
 
       /* Drawer。 */
       drawer: Drawer(
@@ -87,12 +85,9 @@ class _ScaffoldExampleState extends State<ScaffoldExample> {
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(color: Colors.blue),
-              child: Text('Drawer Header 左上角的抽屉'),
-            ),
+            const DrawerHeader(child: Text('Customer informations')),
             ListTile(
-              title: const Text('Home主页'),
+              title: const Text('Orders'),
               selected: _selectedIndex == 0,
               onTap: () {
                 // Update the state of the app
@@ -102,7 +97,7 @@ class _ScaffoldExampleState extends State<ScaffoldExample> {
               },
             ),
             ListTile(
-              title: const Text('Business业务'),
+              title: const Text('Private information'),
               selected: _selectedIndex == 1,
               onTap: () {
                 // Update the state of the app
@@ -112,7 +107,7 @@ class _ScaffoldExampleState extends State<ScaffoldExample> {
               },
             ),
             ListTile(
-              title: const Text('School学校'),
+              title: const Text('Settings'),
               selected: _selectedIndex == 2,
               onTap: () {
                 // Update the state of the app

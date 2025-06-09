@@ -20,9 +20,11 @@ I want to do these in order:
 
 The instructor said he wanted all the code in the main.dart.
 
+
+
 ## The Food/Drink Menu picture page it self
 
-d
+Look at the following list and picture. It is clear to see that the 1st part is important, and I want to do it in Grid. The 2nd part is a logo, and it can be done by drawer. The 3rd  part is search bar, and it is hard and need interaction. So, I choose do 1, 2 and 3 in sequence.
 
 1. Goods
 
@@ -30,6 +32,6 @@ d
 
 3. Search bar.
 
-d
+![Day-43-Food-or-drink-menu-2048x1482_remarked.png](D:\Canada\OntarioStudy\Lakehead\Learn\MobileProgramming\code\food_drinking_menu\assets\images\Day-43-Food-or-drink-menu-2048x1482_remarked.png)
 
 1
